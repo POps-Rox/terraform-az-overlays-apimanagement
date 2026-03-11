@@ -6,7 +6,7 @@
 #--------------------------------------
 # This module will lookup the Azure Region and return the short name for the region
 module "mod_azregions" {
-  source  = "azurenoops/overlays-azregions-lookup/azurerm"
+  source  = "github.com/POps-Rox/tf-az-overlays-azregionslookup"
   version = "~> 1.0.0"
 
   azure_region = var.location
@@ -23,7 +23,7 @@ data "azurerm_resource_group" "rgrp" {
 }
 
 module "mod_scaffold_rg" {
-  source  = "azurenoops/overlays-resource-group/azurerm"
+  source  = "github.com/POps-Rox/tf-az-overlays-resourcegroup"
   version = "~> 1.0.1"
 
   count = var.create_apim_resource_group ? 1 : 0

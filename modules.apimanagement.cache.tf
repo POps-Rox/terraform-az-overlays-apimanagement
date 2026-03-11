@@ -5,7 +5,7 @@ module "mod_redis_cache" {
   depends_on = [
     module.mod_scaffold_rg,
   ]
-  source                       = "azurenoops/overlays-redis/azurerm"
+  source                       = "github.com/POps-Rox/tf-az-overlays-redis"
   version                      = "~> 2.0"
   count                        = var.enable_redis_cache ? 1 : 0
   location                     = lower(local.location)

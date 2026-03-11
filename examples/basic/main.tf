@@ -9,7 +9,7 @@ module "mod_apim" {
     azurerm_subnet.pe_subnet
   ]
   source = "../.."
-  #source  = "azurenoops/overlays-api-management/azurerm"
+  #source  = "github.com/POps-Rox/tf-az-overlays-apimanagement"
   #version = ">= 1.0.0"
 
   # By default, this module will create a resource group and 
