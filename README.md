@@ -50,7 +50,7 @@ module "mod_apim" {
     azurerm_subnet.apim_subnet,
     azurerm_subnet.pe_subnet
   ]
-  source  = "azurenoops/overlays-api-management/azurerm"
+  source  = "POps-Rox/tf-az-overlays-api-management/azurerm"
   version = "~> X.X"
 
   # By default, this module will create a resource group and 
