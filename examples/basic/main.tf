@@ -26,18 +26,18 @@ module "mod_apim" {
 
   # API Management configuration
   enable_user_identity = true
-  publisher_email = "apim_admins@microsoft.com"
-  publisher_name  = "apim"  
+  publisher_email      = "apim_admins@microsoft.com"
+  publisher_name       = "apim"
   min_api_version      = "2019-12-01"
 
   # SKU configuration
-  sku_tier             = "Developer"
-  sku_capacity         = 1
+  sku_tier     = "Developer"
+  sku_capacity = 1
 
   # Virtual network configuration
   virtual_network_name = azurerm_virtual_network.apim_vnet.name
   apim_subnet_name     = azurerm_subnet.apim_subnet.name # This is the subnet where APIM will be deployed. 
-  
+
   # Private endpoint configuration
   # Key Vault and Redis are deployed by default.
   # So we need to make sure that the subnet is configured for private endpoints.

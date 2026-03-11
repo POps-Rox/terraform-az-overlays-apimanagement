@@ -1,7 +1,7 @@
 # Copyright (c) Microsoft Corporation.
 # Licensed under the MIT License.
 
-resource "azurerm_application_insights" "apim_app_insights" {  
+resource "azurerm_application_insights" "apim_app_insights" {
   count               = var.enable_application_insights ? 1 : 0
   location            = local.location
   name                = local.apim_app_insights_name
@@ -11,7 +11,7 @@ resource "azurerm_application_insights" "apim_app_insights" {
 }
 
 resource "azurerm_api_management_logger" "app_insights" {
- depends_on = [ 
+  depends_on = [
     azurerm_api_management.api_management,
     azurerm_application_insights.apim_app_insights
   ]
@@ -26,9 +26,9 @@ resource "azurerm_api_management_logger" "app_insights" {
 }
 
 resource "azurerm_api_management_diagnostic" "app_insights" {
-    depends_on = [
-        azurerm_api_management_logger.app_insights
-    ]
+  depends_on = [
+    azurerm_api_management_logger.app_insights
+  ]
   count                    = var.enable_application_insights ? 1 : 0
   identifier               = "applicationinsights"
   resource_group_name      = local.resource_group_name

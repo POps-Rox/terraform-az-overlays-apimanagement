@@ -16,9 +16,9 @@ module "mod_key_vault" {
   workload_name                = var.workload_name
 
   # Key Vault Configuration
-  sku_name = var.key_vault_sku_name
+  sku_name                = var.key_vault_sku_name
   enable_purge_protection = var.purge_protection_enabled
-  enabled_for_deployment = var.enabled_for_template_deployment
+  enabled_for_deployment  = var.enabled_for_template_deployment
 
   # Creating Private Endpoint requires, VNet name to create a Private Endpoint
   # By default this will create a `privatelink.vaultcore.azure.net` DNS zone. if created in commercial cloud

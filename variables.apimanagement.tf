@@ -5,7 +5,7 @@
 # API Management Configuration     ##
 #####################################
 
-variable "enable_redis_cache"{ 
+variable "enable_redis_cache" {
   description = "Controls if the redis cache should be enabled. Default is true."
   type        = bool
   default     = true
@@ -17,12 +17,12 @@ variable "apim_custom_name" {
   default     = null
 }
 
-variable "sku_tier"{
+variable "sku_tier" {
   description = "The tier of the API Management instance. Possible values are Developer, Basic, Standard, Premium, Consumption."
   type        = string
   default     = "Developer"
 }
-variable "sku_capacity"{
+variable "sku_capacity" {
   description = "The capacity of the API Management instance. Possible values are positive integers from 1-12, except for Consumption tier where it is 0."
   type        = number
   default     = 1

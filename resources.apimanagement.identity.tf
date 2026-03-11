@@ -11,6 +11,6 @@ data "azurerm_user_assigned_identity" "apim_identity" {
   depends_on = [
     azurerm_user_assigned_identity.apim_identity
   ]
-  name = local.apim_user_assigned_identity_name
+  name                = local.apim_user_assigned_identity_name
   resource_group_name = local.resource_group_name
 }

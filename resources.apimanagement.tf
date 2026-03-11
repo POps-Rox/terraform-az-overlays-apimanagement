@@ -4,7 +4,7 @@
 resource "azurerm_public_ip" "apim_pip" {
   # To deploy APIM to the stv2 platform, you must specify a public IP address else it will deploy to stv1. 
   # The stv2 platform currently is not supported in Azure USGovernment.  Remove this check when stv2 is supported in Azure US Government. 
-  count = var.environment == "public" ? 1 : 0
+  count               = var.environment == "public" ? 1 : 0
   name                = local.apim_pip_name
   resource_group_name = local.resource_group_name
   location            = local.location
