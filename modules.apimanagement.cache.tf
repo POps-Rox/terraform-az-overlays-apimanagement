@@ -6,7 +6,6 @@ module "mod_redis_cache" {
     module.mod_scaffold_rg,
   ]
   source                       = "github.com/POps-Rox/tf-az-overlays-redis"
-  version                      = "~> 2.0"
   count                        = var.enable_redis_cache ? 1 : 0
   location                     = lower(local.location)
   org_name                     = lower(var.org_name)
