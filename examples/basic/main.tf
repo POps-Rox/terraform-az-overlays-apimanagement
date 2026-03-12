@@ -12,6 +12,10 @@ module "mod_apim" {
   #source  = "github.com/POps-Rox/tf-az-overlays-apimanagement"
   #version = ">= 1.0.0"
 
+  providers = {
+    azurerm = azurerm
+  }
+
   # By default, this module will create a resource group and 
   # provide a name for an existing resource group. If you wish 
   # to use an existing resource group, change the option 
