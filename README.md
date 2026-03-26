@@ -97,7 +97,7 @@ module "mod_apim" {
 | Name | Version |
 |------|---------|
 | azurenoopsutils | ~> 1.0.4 |
-| azurerm | ~> 3.22 |
+| azurerm | ~> 3.116 |
 ## Modules
 
 | Name | Source | Version |
