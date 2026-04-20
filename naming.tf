@@ -4,7 +4,7 @@
 #------------------------------------------------------------
 # Azure NoOps Naming - This should be used on all resource naming
 #------------------------------------------------------------
-data "azurenoopsutils_resource_name" "apim" {
+data "popsrox_utils_resource_name" "apim" {
   name          = var.workload_name
   resource_type = "azurerm_api_management"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : var.location]
@@ -13,7 +13,7 @@ data "azurenoopsutils_resource_name" "apim" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "pip_name" {
+data "popsrox_utils_resource_name" "pip_name" {
   name          = var.workload_name
   resource_type = "azurerm_public_ip"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : var.location]
@@ -22,7 +22,7 @@ data "azurenoopsutils_resource_name" "pip_name" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "nsg" {
+data "popsrox_utils_resource_name" "nsg" {
   name          = var.workload_name
   resource_type = "azurerm_network_security_group"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : var.location]
@@ -31,7 +31,7 @@ data "azurenoopsutils_resource_name" "nsg" {
   separator     = "-"
 }
 
-data "azurenoopsutils_resource_name" "identity" {
+data "popsrox_utils_resource_name" "identity" {
   name          = var.workload_name
   resource_type = "azurerm_user_assigned_identity"
   prefixes      = [var.org_name, var.use_location_short_name ? module.mod_azregions.location_short : var.location]
