@@ -8,9 +8,9 @@
 
 # Azure NoOps API Management Overlay Module
 
-[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![Notice](https://img.shields.io/badge/notice-copyright-yellow.svg)](NOTICE) [![MIT License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/azurenoops/overlays-api-management/azurerm/)
+[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![Notice](https://img.shields.io/badge/notice-copyright-yellow.svg)](NOTICE) [![MIT License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/POps-Rox/overlays-api-management/azurerm/)
 
-This Overlay terraform module can create a API Management resource and manage related parameters (Storage, Key Vault, Redis Cache, NSG Rules, Private Endpoints, etc.) to be used in a [SCCA compliant Network](https://registry.terraform.io/modules/azurenoops/overlays-management-hub/azurerm/latest).
+This Overlay terraform module can create a API Management resource and manage related parameters (Storage, Key Vault, Redis Cache, NSG Rules, Private Endpoints, etc.) to be used in a [SCCA compliant Network](https://registry.terraform.io/modules/POps-Rox/overlays-management-hub/azurerm/latest).
 
 ## SCCA Compliance
 
@@ -96,16 +96,16 @@ module "mod_apim" {
 
 | Name | Version |
 |------|---------|
-| azurenoopsutils | ~> 1.0.4 |
+| popsrox-utils | ~> 1.0.4 |
 | azurerm | ~> 3.116 |
 ## Modules
 
 | Name | Source | Version |
 |------|--------|---------|
-| mod\_azregions | azurenoops/overlays-azregions-lookup/azurerm | ~> 1.0.0 |
-| mod\_key\_vault | azurenoops/overlays-key-vault/azurerm | ~> 2.0 |
-| mod\_redis\_cache | azurenoops/overlays-redis/azurerm | ~> 2.0 |
-| mod\_scaffold\_rg | azurenoops/overlays-resource-group/azurerm | ~> 1.0.1 |
+| mod\_azregions | POps-Rox/overlays-azregions-lookup/azurerm | ~> 1.0.0 |
+| mod\_key\_vault | POps-Rox/overlays-key-vault/azurerm | ~> 2.0 |
+| mod\_redis\_cache | POps-Rox/overlays-redis/azurerm | ~> 2.0 |
+| mod\_scaffold\_rg | POps-Rox/overlays-resource-group/azurerm | ~> 1.0.1 |
 ## Resources
 
 | Name | Type |
@@ -132,8 +132,8 @@ module "mod_apim" {
 | [azurerm_public_ip.apim_pip](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/public_ip) | resource |
 | [azurerm_subnet_network_security_group_association.apim-subnet-nsg-association](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/subnet_network_security_group_association) | resource |
 | [azurerm_user_assigned_identity.apim_identity](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/user_assigned_identity) | resource |
-| [azurenoopsutils_resource_name.apim](https://registry.terraform.io/providers/azurenoops/azurenoopsutils/latest/docs/data-sources/resource_name) | data source |
-| [azurenoopsutils_resource_name.keyvault](https://registry.terraform.io/providers/azurenoops/azurenoopsutils/latest/docs/data-sources/resource_name) | data source |
+| [popsrox_resource_name.apim](https://registry.terraform.io/providers/POps-Rox/azutils/latest/docs/data-sources/resource_name) | data source |
+| [popsrox_resource_name.keyvault](https://registry.terraform.io/providers/POps-Rox/azutils/latest/docs/data-sources/resource_name) | data source |
 | [azurerm_api_management.apim](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/api_management) | data source |
 | [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config) | data source |
 | [azurerm_network_security_group.apim-nsg](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/network_security_group) | data source |
