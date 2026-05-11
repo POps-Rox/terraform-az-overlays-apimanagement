@@ -1,10 +1,10 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: tf-az-overlays-apimanagement
+  name: terraform-az-overlays-apimanagement
   description: Terraform overlay module for Azure API Management
   annotations:
-    github.com/project-slug: POps-Rox/tf-az-overlays-apimanagement
+    github.com/project-slug: POps-Rox/terraform-az-overlays-apimanagement
     backstage.io/techdocs-ref: dir:.
   tags:
     - terraform
@@ -12,7 +12,7 @@ metadata:
     - azure
     - platform-ops
   links:
-    - url: https://github.com/POps-Rox/tf-az-overlays-apimanagement
+    - url: https://github.com/POps-Rox/terraform-az-overlays-apimanagement
       title: GitHub Repository
       icon: github
 spec:

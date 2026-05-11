@@ -9,7 +9,7 @@ module "mod_apim" {
     azurerm_subnet.pe_subnet
   ]
   source = "../.."
-  #source  = "github.com/POps-Rox/tf-az-overlays-apimanagement"
+  #source  = "github.com/POps-Rox/terraform-az-overlays-apimanagement"
   #version = ">= 1.0.0"
 
   providers = {

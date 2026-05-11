@@ -5,7 +5,7 @@ module "mod_redis_cache" {
   depends_on = [
     module.mod_scaffold_rg,
   ]
-  source                       = "github.com/POps-Rox/tf-az-overlays-redis"
+  source                       = "github.com/POps-Rox/terraform-az-overlays-redis"
   count                        = var.enable_redis_cache ? 1 : 0
   location                     = lower(local.location)
   org_name                     = lower(var.org_name)
